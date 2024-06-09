@@ -24,6 +24,18 @@ class ViewController: UIViewController {
         return tableView
     }()
     
+    lazy var button: UIButton = {
+        let button = UIButton()
+        button.setTitle("tap me", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.addTarget(self, action: #selector(buttonFunction), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc func buttonFunction() {
+        
+    }
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
